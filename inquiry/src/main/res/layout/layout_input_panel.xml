@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray_divide_line_e0e0e0"/>
+
+
+    <!--<RelativeLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="@dimen/dip160"-->
+        <!--android:paddingBottom="@dimen/content_very_far_margin">-->
+
+        <!--<EditText-->
+            <!--android:id="@+id/sendMessageEdit"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_marginLeft="@dimen/content_super_far_margin"-->
+            <!--android:layout_marginRight="@dimen/content_super_far_margin"-->
+            <!--android:layout_marginTop="@dimen/content_very_far_margin"-->
+            <!--android:background="@drawable/shape_stroke_line_gray"-->
+            <!--android:gravity="left|top"-->
+            <!--android:hint="请描述您的病情症状、发生时间。"-->
+            <!--android:padding="@dimen/dip15"-->
+            <!--android:textColor="@color/gray_black_text"-->
+            <!--android:textColorHint="@color/white_gray_hint"-->
+            <!--android:textSize="@dimen/font20" />-->
+
+        <!--<Button-->
+            <!--android:id="@+id/sendMessageBtn"-->
+            <!--style="?android:attr/borderlessButtonStyle"-->
+            <!--android:layout_width="@dimen/dip120"-->
+            <!--android:layout_height="@dimen/dip40"-->
+            <!--android:layout_alignParentBottom="true"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_marginBottom="@dimen/dip15"-->
+            <!--android:layout_marginRight="@dimen/dip65"-->
+            <!--android:background="@drawable/selector_cyan_round_btn_background"-->
+            <!--android:gravity="center"-->
+            <!--android:paddingLeft="@dimen/content_very_far_margin"-->
+            <!--android:paddingRight="@dimen/content_very_far_margin"-->
+            <!--android:text="发送"-->
+            <!--android:textColor="@color/white"-->
+            <!--android:textSize="@dimen/font20" />-->
+
+    <!--</RelativeLayout>-->
+
+    <LinearLayout
+        android:id="@+id/ll_input_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        >
+        <EditText
+            android:id="@+id/sendMessageEdit"
+            android:layout_width="0dp"
+            android:layout_height="38dp"
+            android:layout_marginLeft="14dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_stroke_corners_white"
+            android:gravity="center_vertical"
+            android:hint="请输入文字"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:textColor="@color/gray_text"
+            android:textSize="@dimen/sp16"
+            />
+        <FrameLayout
+            android:id="@+id/sendLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            >
+
+            <TextView
+                android:id="@+id/tv_send_message"
+                android:layout_width="52dp"
+                android:layout_height="34dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:text="发送"
+                android:textColor="@color/selector_msg_send_color"
+                android:textSize="18sp"
+                android:visibility="visible"/>
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:padding="@dimen/dp01"
+              android:background="@color/gray_divide_line"
+              android:orientation="vertical">
+    <FrameLayout
+        android:id="@+id/largeSizeFrameLayout"
+        android:layout_width="@dimen/float_window_width"
+        android:layout_height="@dimen/float_window_height"
+        android:background="#111111"
+     >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textSize="@dimen/sp12"
+            tools:text="对方关闭视频"
+            android:textColor="#ffffff"
+            />
+    </FrameLayout>
+</FrameLayout>

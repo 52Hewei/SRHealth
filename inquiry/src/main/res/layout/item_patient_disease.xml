@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          android:layout_width="wrap_content"
+          android:layout_height="@dimen/dp20"
+          android:layout_marginBottom="@dimen/dp05"
+          android:layout_marginRight="@dimen/dp05"
+          android:background="@drawable/selector_cyan_hollow_btn_background"
+          android:gravity="center"
+          android:paddingLeft="@dimen/dp15"
+          android:paddingRight="@dimen/dp15"
+          android:textColor="@color/selector_dark_cyan_white_textcolor"
+          android:textSize="@dimen/sp14"
+          tools:text="呼吸道感染"
+    />
+

@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bg_login">
+    <TextView
+        android:id="@+id/tv_service_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp05"
+        android:layout_marginTop="@dimen/dp18"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp10"
+        />
+    <LinearLayout style="@style/Login_LinearLayout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            >
+
+            <TextView
+                android:id="@+id/verification_code_login"
+                style="@style/Login_TextView_One"
+                android:text="@string/verification_code_login"
+                android:textStyle="bold"
+                />
+
+            <View
+                android:layout_width="@dimen/dp005"
+                android:layout_height="@dimen/dp20"
+                android:background="@color/white"
+                android:layout_gravity="center_vertical"
+                />
+
+            <TextView
+                android:id="@+id/password_login"
+                style="@style/Login_TextView_One"
+                android:text="@string/password_login"
+                />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="思瑞健康"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:drawablePadding="10dp"
+            android:gravity="center_horizontal"
+            android:drawableTop="@mipmap/ic_logo"
+            android:layout_marginBottom="@dimen/dp10"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp40">
+
+            <ImageView
+                android:id="@+id/login_user_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp10"
+                android:layout_marginRight="@dimen/dp15"
+                android:background="@mipmap/icon_login_user" />
+
+            <ImageView
+                android:id="@+id/login_delete_user_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/dp10"
+                android:src="@mipmap/icon_login_delete"
+                android:visibility="invisible" />
+
+            <EditText
+                android:id="@+id/login_user_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/login_delete_user_btn"
+                android:layout_toRightOf="@id/login_user_image"
+                android:textCursorDrawable="@drawable/shape_cursor_color"
+                android:background="@color/transparent"
+                android:hint="@string/input_phone_number"
+                android:maxLength="11"
+                android:maxLines="1"
+                android:inputType="number"
+                android:textColorHint="@color/white"
+                android:textSize="@dimen/login_text_size_two"
+                android:textColor="@color/white"
+                />
+
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp005"
+            android:background="@color/white" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp30">
+
+            <ImageView
+                android:id="@+id/login_password_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp10"
+                android:layout_marginRight="@dimen/dp15"
+                android:background="@mipmap/icon_login_pwd"
+                />
+
+            <TextView
+                android:id="@+id/get_verification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/get_verification"
+                android:textColor="@color/white"
+                android:textSize="@dimen/login_text_size_two"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/dp10"
+                android:layout_centerVertical="true"
+                />
+
+            <View
+                android:id="@+id/parting_line"
+                android:layout_width="@dimen/dp005"
+                android:layout_height="@dimen/dp15"
+                android:background="@color/white"
+                android:layout_toLeftOf="@id/get_verification"
+                android:layout_marginRight="@dimen/dp10"
+                android:layout_centerVertical="true"
+                />
+
+            <EditText
+                android:id="@+id/login_verification_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textCursorDrawable="@drawable/shape_cursor_color"
+                android:layout_toRightOf="@id/login_password_image"
+                android:layout_toLeftOf="@id/parting_line"
+                android:background="@color/transparent"
+                android:maxLength="@dimen/edittext_max_number_password"
+                android:maxLines="1"
+                android:inputType="number"
+                android:hint="@string/input_verification"
+                android:textColorHint="@color/white"
+                android:textSize="@dimen/login_text_size_two"
+                android:textColor="@color/white"
+                android:singleLine="true"
+
+                />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp005"
+            android:layout_marginTop="@dimen/dp10"
+            android:background="@color/white" />
+
+
+        <TextView
+            android:id="@+id/login_forget_pwd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="@dimen/dp05"
+            android:layout_marginTop="@dimen/dp10"
+            android:text="@string/forget_password"
+            android:textColor="@color/white"
+            android:textSize="@dimen/login_text_size_three"
+            android:visibility="invisible"
+            />
+
+        <Button
+            android:id="@+id/login_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp20"
+            android:background="@drawable/shape_white_corner05"
+            android:gravity="center"
+            android:paddingBottom="@dimen/dp10"
+            android:paddingTop="@dimen/dp10"
+            android:text="@string/login"
+            android:textColor="@color/color_1CCBCF"
+            android:textSize="@dimen/login_text_size_four" />
+
+        <LinearLayout
+            android:id="@+id/agreement_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dp30">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/click_login_is_agree"
+                android:textColor="@color/white"
+                android:textSize="@dimen/login_text_size_three"
+                android:alpha="0.6"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/online_hospital_service_agreement"
+                android:textColor="@color/white"
+                android:textSize="@dimen/login_text_size_three"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

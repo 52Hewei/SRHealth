@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white_gray_bg"
+              android:orientation="vertical"
+    >
+    <include layout="@layout/layout_title"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="16dp"
+        android:paddingTop="@dimen/dp10"
+        android:paddingBottom="@dimen/dp10"
+        android:background="@drawable/ripple_item_click_bg"
+        >
+     <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:textColor="@color/gray_666"
+         android:textSize="@dimen/sp16"
+         android:text="头像"
+         android:layout_centerVertical="true"
+         />
+        <ImageView
+            android:layout_width="@dimen/dp50"
+            android:layout_height="@dimen/dp50"
+            android:layout_toLeftOf="@+id/iv_right"
+            android:layout_marginRight="@dimen/dp10"
+            android:src="@drawable/icon_doctor_head_portrait"
+
+            />
+        <ImageView
+            android:id="@+id/iv_right"
+            style="@style/Personal_ImageView"
+            />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/ripple_item_click_bg"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="手机号码"
+            android:textColor="@color/gray_666"
+            android:textSize="@dimen/sp16"
+            android:layout_centerVertical="true"
+            />
+
+        <TextView
+            android:id="@+id/tv_phone_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:gravity="right"
+            android:layout_centerVertical="true"
+            android:textColor="@color/gray_666"
+            android:textSize="@dimen/sp16"
+            tools:text="13246737513"
+            />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:paddingLeft="16dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/name_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="患者姓名"
+            android:textColor="@color/gray_666"
+            android:textSize="16sp"
+            android:layout_centerVertical="true"
+            />
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textColor="@color/gray_666"
+            android:textSize="@dimen/sp16"
+            android:minWidth="@dimen/dp60"
+            android:gravity="right"
+            android:layout_toLeftOf="@+id/iv_name_arrow"
+            tools:text="901"
+            />
+        <ImageView
+            android:id="@+id/iv_name_arrow"
+            style="@style/Personal_ImageView"
+            />
+<!--
+        <EditText
+            android:id="@+id/et_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:gravity="end"
+            android:maxLines="1"
+            android:maxLength="8"
+            android:textColor="@color/gray_666"
+            android:textColorHint="@color/gray_hint"
+            android:textSize="16sp"
+            android:background="@color/transparent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:hint="@string/user_info_name_hint"
+            android:inputType="textPersonName"
+            >
+            <requestFocus/>
+
+        </EditText>-->
+
+<!--        <TextView
+            android:id="@+id/tv_name_error"
+            style="@style/Hint_Error"
+            android:layout_alignEnd="@id/et_name"
+            android:layout_below="@id/et_name"
+            android:layout_marginTop="1dp"
+            android:maxLines="1"
+            android:text="@string/user_info_real_name_error_hint"
+            tools:visibility="visible"
+            />-->
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/gender_layout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:paddingLeft="16dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/white"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="性别"
+            android:textColor="@color/gray_666"
+            android:textSize="16sp"
+            android:layout_centerVertical="true"
+            />
+
+   <!--     <RadioGroup
+            android:id="@+id/rg_gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            >
+
+            <RadioButton
+                android:id="@+id/rb_male"
+                style="@style/style_user_info_gender_radio_btn"
+                android:text="@string/boy"
+                />
+
+            <RadioButton
+                android:id="@+id/rb_female"
+                style="@style/style_user_info_gender_radio_btn"
+                android:layout_marginLeft="20dp"
+                android:text="@string/girl"
+                />
+
+        </RadioGroup>-->
+
+
+        <TextView
+            android:id="@+id/tv_user_sex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/dp10"
+            android:text="@string/boy"
+            android:gravity="right"
+            android:minWidth="@dimen/dp60"
+            android:textColor="@color/gray_666"
+            android:textSize="16sp"
+            android:layout_toLeftOf="@+id/iv_sex_arrow"
+            android:layout_centerVertical="true"
+            />
+        <ImageView
+            android:id="@+id/iv_sex_arrow"
+            style="@style/Personal_ImageView"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:paddingLeft="16dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/white"
+        >
+
+        <TextView
+            android:id="@+id/age_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="年龄"
+            android:textColor="@color/gray_666"
+            android:textSize="16sp"
+            android:layout_centerVertical="true"
+            />
+
+<!--        <EditText
+            android:id="@+id/et_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:gravity="end"
+            android:maxLines="1"
+            android:textColor="@color/gray_666"
+            android:textColorHint="@color/gray_hint"
+            android:textSize="16sp"
+            android:background="@color/transparent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:hint="@string/user_info_age_hint"
+            android:inputType="number"
+            android:maxLength="2"
+            android:selectAllOnFocus="true"
+            />-->
+        <TextView
+            android:id="@+id/tv_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textColor="@color/gray_666"
+            android:textSize="@dimen/sp16"
+            android:layout_toLeftOf="@+id/iv_age_arrow"
+            android:minWidth="@dimen/dp60"
+            android:gravity="right"
+            tools:text="78"
+            />
+        <ImageView
+            android:id="@+id/iv_age_arrow"
+            style="@style/Personal_ImageView"
+            />
+
+<!--        <TextView
+            android:id="@+id/tv_age_unit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/age_layout"
+            android:layout_marginLeft="@dimen/dp20"
+            android:layout_toEndOf="@id/et_age"
+            android:textColor="@color/gray_666"
+            android:textSize="@dimen/sp16"
+            tools:text="@string/user_info_age_unit"
+            android:visibility="gone"
+            />-->
+
+<!--        <TextView
+            android:id="@+id/tv_age_error"
+            style="@style/Hint_Error"
+            android:layout_alignEnd="@id/et_age"
+            android:layout_below="@id/et_age"
+            android:layout_marginTop="1dp"
+            android:text="@string/age_input_wrong"
+            tools:visibility="visible"
+            />-->
+    </RelativeLayout>
+
+</LinearLayout>

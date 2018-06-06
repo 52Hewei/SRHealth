@@ -1,0 +1,118 @@
+<resources>
+    <string name="app_name">inquiry</string>
+    <string name="readed">已读</string>
+    <string name="diagnosis_detail_note">以下是您本次问诊的详细结果</string>
+    <string name="patient_name">姓名：</string>
+    <string name="patient_gender">性别：</string>
+    <string name="patient_age">年龄：</string>
+    <string name="diagnose_result_title">我的问诊结果</string>
+    <string name="first_diagnosis_colon">初步诊断：</string>
+    <string name="parse_advise_colon">处理意见：</string>
+    <string name="medicine_prescribe_colon">药品处方：</string>
+    <string name="close">关闭</string>
+    <string name="cancel_inquiry">取消问诊</string>
+    <string name="change_doctor">更换医生</string>
+    <string name="look_diagnosis_detail"><u>查询诊断详情</u></string>
+    <string name="queue_number_remind">您前面还有：%s人问诊，请耐心等待...</string>
+    <string name="checking">处方审核中，请稍后查看</string>
+    <string name="patient_chief_complaint_msg">%1$s医生，您好。我是%2$s，%3$s，%4$s岁。\n我的病情是：%5$s</string>
+    <string name="doctor_status">接诊中（排队人数 %s 人）</string>
+
+
+    <string name="cancel_reason_choose">请选择取消原因</string>
+    <string name="cancel_reason_no_guide">无人引导，不知如何操作</string>
+    <string name="cancel_reason_no_response">医生不接诊，或回答太慢</string>
+    <string name="cancel_reason_bad_attitude">医生态度差，不想再问诊</string>
+    <string name="cancel_reason_bad_network">网络很卡，用起来很费劲</string>
+    <string name="cancel_reason_bad_image">医生形象差，怀疑专业性</string>
+    <string name="cancel_reason_no_help">医生解决不了自己的问题</string>
+    <string name="submit">提交</string>
+
+    <string name="dialog_content_cancel_consult">点击确认医生将无法为您下诊断及开处方，是否确定要取消问诊。</string>
+
+    <string name="patient_info_modify">编辑</string>
+    <string name="patient_info_save">提交保存</string>
+    <string name="start_consult">提交问诊</string>
+    <string name="patient_phone_warning">若未输入手机号，本次问诊将不被保留</string>
+    <string name="patient_login_switch">切换帐号</string>
+    <string name="patient_phone_warning1">手机号码输入有误，请输入有效号码</string>
+    <string name="patient_phone">&#8194;&#8194;手机号码：</string>
+    <string name="patient_phone_hint">请输入手机号</string>
+    <string name="patient_name_consult">*&#8194;患者姓名：</string>
+    <string name="patient_name_consult_hint">请输入患者姓名</string>
+    <string name="patient_name_warning">姓名输入有误，请输入 2 个字符以上姓名，如：张三</string>
+    <string name="patient_age_warning">请输入正确的年龄</string>
+    <string name="patient_gender_consult">*&#8194;性　　别：</string>
+    <string name="patient_age_consult">*&#8194;年　　龄：</string>
+    <string name="patient_age_consult_hint">请输入患者年龄</string>
+    <string name="medicine_agreement_hint">我已详细阅读并同意</string>
+    <string name="medicine_agreement">《药物使用知情同意书》</string>
+    <string name="patient_title_hint">温馨提示：想得到专业医生的详细指导，需有符合要求的病情资料！请按提示提交疾病信息！</string>
+
+    <string name="patient_description_hint">请描述您的病情，可精准匹配医生 </string>
+
+    <!--弹框文本-->
+    <string name="dialog_title_default">温馨提示</string>
+    <string name="dialog_title_hint">提示</string>
+    <string name="dialog_send_code">获取验证码</string>
+    <string name="dialog_phone_hint">您的手机号是 %s，请输入验证码登录。</string>
+    <string name="dialog_content_net_error">网络异常，请您联系店员处理；\n是否同意退出当前问诊？</string>
+
+    <string name="dialog_content_switch_account">您是否需要切换会员帐号？</string>
+    <string name="imageText">图文</string>
+    <string name="video">视频</string>
+
+    <string name="user_center_information">个人信息</string>
+    <string name="user_center_notes">问诊记录</string>
+    <string name="user_center_register">挂号记录</string>
+    <string name="user_center_health">健康数据</string>
+    <string name="user_center_id_hint">*请输入正确的身份证号，性别与出生日期是根据您的身份证号获取。</string>
+    <string name="quick_item_title">智能极速匹配在线医生</string>
+
+    <string name="number_of_queue">排队人数%s人</string>
+    <string name="quick_to_inquiry">快速接入问诊</string>
+
+    <string name="avchat_hangup">结束通话</string>
+    <string name="avchat_switch_to_video">切换视频</string>
+    <string name="avchat_switch_to_audio">切换语音</string>
+    <string name="avchat_video_call_request">请求视频聊天…</string>
+    <string name="avchat_audio_call_wifi_unavailable_tip">当前非WiFi环境，每分钟将产生约0.5M的流量</string>
+    <string name="avchat_network_grade_0">网络通畅：</string>
+    <string name="avchat_network_grade_1">网络正常：</string>
+    <string name="avchat_network_grade_2">网络一般：</string>
+    <string name="avchat_network_grade_3">网络较差：</string>
+    <string name="avchat_refuse">拒绝</string>
+    <string name="avchat_receive">开启</string>
+    <string name="avchat_pickup">接听</string>
+    <string name="avchat_net_error_then_quit">网络异常，通话结束</string>
+    <string name="avchat_call_finish">通话结束</string>
+    <string name="avchat_peer_reject">对方拒绝了本次通话</string>
+    <string name="avchat_peer_protocol_low_version">对方版本过低，请提示对方升级</string>
+    <string name="avchat_local_protocol_low_version">版本过低，请升级后使用</string>
+    <string name="avchat_invalid_channel_id">对方已挂断</string>
+    <string name="avchat_local_call_busy">本地通话中，无法使用易信进行通话。</string>
+    <string name="avchat_peer_busy">对方正在通话中，请稍后再拨。</string>
+    <string name="avchat_wait_recieve">等待对方接听…</string>
+    <string name="avchat_audio_call_request">请求通话</string>
+    <string name="avchat_connecting">连接中…</string>
+    <string name="avchat_audio_to_video_invitation">对方邀请你开启视频聊天…</string>
+    <string name="avchat_cannot_establish_connection">无法和对方建立连接</string>
+    <string name="avchat_network_unstable_notificaton">当前网络不稳定</string>
+    <string name="avchat_peer_close_camera">对方关闭了摄像头</string>
+    <string name="avchat_local_close_camera">你关闭了摄像头</string>
+    <string name="avchat_audio_to_video_wait">正在等待对方开启摄像头…</string>
+    <string name="avchat_no_pick_up">对方已拒绝</string>
+    <string name="avchat_has_hangup">已挂断</string>
+    <string name="avchat_no_response">对方无应答</string>
+    <string name="avchat_buddy_reject">对方正忙</string>
+    <string name="avchat_cancel">已取消</string>
+    <string name="avchat_switch_video_reject">对方不同意音频切换为视频！</string>
+    <string name="avchat_notification">正在与%1$s通话中，点击继续</string>
+    <string name="avchat_hangup_notificaion">%1$s:【网络通话】</string>
+    <string name="avchat_call">网络通话</string>
+    <string name="avchat_no_pickup_call">未接听</string>
+    <string name="avchat_call_failed">发起通话失败</string>
+    <string name="avchat_no_permission">暂无权限，请开通音视频服务</string>
+    <string name="avchat_in_switch">请耐心等待！</string>
+    <string name="avchat_device_no_ready">音视频设备未准备好</string>
+</resources>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_gray_bg"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+  <include layout="@layout/layout_title"/>
+  <include layout="@layout/item_quick_consult"
+           android:id="@+id/layout_quick_consult"
+           android:layout_height="120dp"
+           android:layout_width="match_parent"
+           android:layout_marginLeft="@dimen/dp10"
+           android:layout_marginRight="@dimen/dp10"
+           android:layout_marginTop="@dimen/dp20"
+      />
+</LinearLayout>

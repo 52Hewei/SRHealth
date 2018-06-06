@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white_gray_bg"
+>
+
+    <include layout="@layout/layout_title"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="15dp">
+
+        <TextView
+            android:id="@+id/patient_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="患者信息"
+            android:textColor="@color/black_333333"
+            android:textSize="16sp"
+            />
+
+        <TextView
+            android:id="@+id/name_layout"
+            android:layout_below="@+id/patient_info"
+            android:layout_marginTop="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="姓名： "
+            android:textColor="@color/gray_text"
+            android:textSize="16sp"
+            />
+
+        <TextView
+            android:id="@+id/nameText"
+            android:layout_below="@+id/patient_info"
+            android:layout_toEndOf="@+id/name_layout"
+            android:layout_marginTop="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="张大炮"
+            android:textColor="@color/gray_666"
+            android:textSize="16sp"
+            />
+
+        <TextView
+            android:id="@+id/sex_layout"
+            android:layout_below="@+id/patient_info"
+            android:layout_toEndOf="@+id/nameText"
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="性别： "
+            android:textColor="@color/gray_text"
+            android:textSize="16sp"
+            />
+
+        <TextView
+            android:id="@+id/sexText"
+            android:layout_below="@+id/patient_info"
+            android:layout_toEndOf="@+id/sex_layout"
+            android:layout_marginTop="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="男"
+            android:textColor="@color/gray_666"
+            android:textSize="16sp"
+            />
+
+        <TextView
+            android:id="@+id/age_layout"
+            android:layout_below="@+id/patient_info"
+            android:layout_toEndOf="@+id/sexText"
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="年龄： "
+            android:textColor="@color/gray_text"
+            android:textSize="16sp"
+            />
+
+        <TextView
+            android:id="@+id/ageText"
+            android:layout_below="@+id/patient_info"
+            android:layout_toEndOf="@+id/age_layout"
+            android:layout_marginTop="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="66"
+            android:textColor="@color/gray_666"
+            android:textSize="16sp"
+            />
+
+        <TextView
+            android:id="@+id/kemu_layout"
+            android:layout_below="@+id/name_layout"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="科室： "
+            android:textColor="@color/gray_text"
+            android:textSize="16sp"
+            />
+
+        <TextView
+            android:id="@+id/kemuText"
+            android:layout_below="@+id/name_layout"
+            android:layout_toEndOf="@+id/kemu_layout"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="全科"
+            android:textColor="@color/gray_666"
+            android:textSize="16sp"
+            />
+
+        <TextView
+            android:id="@+id/inquiry_layout"
+            android:layout_below="@+id/name_layout"
+            android:layout_toEndOf="@+id/kemuText"
+            android:layout_alignStart="@+id/sex_layout"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="问诊方式： "
+            android:textColor="@color/gray_text"
+            android:textSize="16sp"
+            />
+
+        <TextView
+            android:id="@+id/inquiryText"
+            android:layout_below="@+id/name_layout"
+            android:layout_toEndOf="@+id/inquiry_layout"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="图文"
+            android:textColor="@color/gray_666"
+            android:textSize="16sp"
+            />
+
+        <TextView
+            android:id="@+id/inquiryTime_layout"
+            android:layout_below="@+id/kemu_layout"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="问诊时间： "
+            android:textColor="@color/gray_text"
+            android:textSize="16sp"
+            />
+
+        <TextView
+            android:id="@+id/inquiryTimeText"
+            android:layout_below="@+id/kemu_layout"
+            android:layout_toEndOf="@+id/inquiryTime_layout"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="03-07 15:27"
+            android:textColor="@color/gray_666"
+            android:textSize="16sp"
+            />
+
+        <TextView
+            android:id="@+id/inquiryStatus_layout"
+            android:layout_below="@+id/kemu_layout"
+            android:layout_toEndOf="@+id/inquiryTimeText"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="问诊状态： "
+            android:textColor="@color/gray_text"
+            android:textSize="16sp"
+            />
+
+        <TextView
+            android:id="@+id/inquiryStatusText"
+            android:layout_below="@+id/kemu_layout"
+            android:layout_toEndOf="@+id/inquiryStatus_layout"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="已完成"
+            android:textColor="@color/gray_666"
+            android:textSize="16sp"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rpInfo_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:paddingBottom="15dp"
+        android:layout_marginTop="10dp"
+        android:visibility="gone"
+        >
+
+        <TextView
+            android:id="@+id/rp_text"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RP"
+            android:textColor="@color/black_333333"
+            android:textSize="16sp"
+            />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_prescribe"
+            android:layout_below="@+id/rp_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            tools:listitem="@layout/item_diagnose_prescribe_sheet_content"
+            />
+
+        <LinearLayout
+            android:id="@+id/ll_consult_record_no_data"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rp_text"
+            android:layout_margin="15dp"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone"
+            tools:visibility="visible"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_norecord"
+                />
+
+            <TextView
+                android:id="@+id/tv_consult_record_no_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/checking"
+                />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_marginTop="10dp"
+        android:padding="15dp"
+        android:background="@color/white"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/rp_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RP"
+            android:textColor="@color/black_333333"
+            android:textSize="16sp"
+            />
+
+        <TextView
+            android:id="@+id/a"
+            android:layout_below="@+id/rp_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11dp"
+            android:text="1.阿司匹林胶囊666666"
+            android:textColor="@color/black_333333"
+            android:textSize="16sp"
+            />
+
+        <TextView
+            android:id="@+id/b"
+            android:layout_below="@+id/a"
+            android:layout_marginTop="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2.阿司匹林胶囊666666"
+            android:textColor="@color/black_333333"
+            android:textSize="16sp"
+            />
+
+    </RelativeLayout>
+
+</LinearLayout>

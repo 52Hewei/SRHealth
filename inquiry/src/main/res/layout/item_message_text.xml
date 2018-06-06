@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical">
+
+    <TextView
+        android:id="@+id/messageItemBodyText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical|left"
+        android:includeFontPadding="false"
+        android:lineSpacingExtra="@dimen/dp03"
+        android:maxWidth="@dimen/max_text_bubble_width"
+        android:textColor="@color/gray_black_text"
+        android:textSize="@dimen/sp16" />
+</LinearLayout>

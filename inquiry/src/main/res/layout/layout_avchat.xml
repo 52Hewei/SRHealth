@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:id="@+id/rt_avchat_surface"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+    >
+    <LinearLayout
+        android:id="@+id/large_size_preview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:orientation="horizontal"/>
+
+    <FrameLayout
+        android:id="@+id/smallSizeFrameLayout"
+        android:layout_width="@dimen/min_window_width"
+        android:layout_height="@dimen/min_window_height"
+        android:layout_alignParentRight="true"
+        >
+
+        <LinearLayout
+            android:id="@+id/small_size_preview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/transparent"
+            android:orientation="vertical"
+            android:visibility="visible"/>
+
+        <ImageView
+            android:id="@+id/smallNotificationImg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/avchat_close_video_send"
+            android:visibility="gone"
+            />
+    </FrameLayout>
+    <ImageView
+        android:id="@+id/iv_switch_window"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:visibility="gone"
+        android:src="@drawable/icon_zoom"
+      />
+    <TextView
+        android:id="@+id/largeNotificationText"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:visibility="gone"
+        tools:text="对方关闭了摄像头"/>
+</RelativeLayout>

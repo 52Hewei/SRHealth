@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+    >
+
+    <LinearLayout
+        android:id="@+id/ll_upgrade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp15"
+        android:background="@drawable/bg_upgrade"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/tv_upgrade_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dp110"
+            android:text="升级到最新版本"
+            android:textColor="@color/gray_text"
+            android:textSize="@dimen/login_text_size_two"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@+id/tv_upgrade_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp20"
+            android:text="1：全新的视觉设计。\n2：支持在线开处方，视频图文问诊。"
+            android:textColor="@color/gray_text"
+            android:textSize="@dimen/login_text_size_two"
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp30"
+            android:layout_marginTop="@dimen/dp20"
+            >
+
+            <Button
+                android:id="@+id/bt_upgrade_confirm"
+                android:layout_width="@dimen/dp110"
+                android:layout_height="@dimen/dp30"
+                android:layout_gravity="center"
+                android:background="@drawable/shape_09cacd_corner05"
+                android:gravity="center"
+                android:text="立即更新"
+                android:textColor="@color/white"
+                android:textSize="@dimen/login_text_size_two"
+                android:layout_centerInParent="true"
+                android:visibility="visible"
+                />
+
+            <com.sirui.basiclib.widget.upgrade.NumberProgressBar
+                android:id="@+id/npb"
+                style="@style/UpdateAppNumberProgressBar_Red"
+                android:layout_marginStart="@dimen/dp20"
+                android:layout_marginEnd="@dimen/dp20"
+                android:layout_centerInParent="true"
+                android:visibility="gone"/>
+
+            <Button
+                android:layout_width="@dimen/dp110"
+                android:layout_height="@dimen/dp30"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/dp20"
+                android:background="@drawable/shape_white_corner05_stroke005"
+                android:gravity="center"
+                android:text="@string/cancel"
+                android:textColor="@color/skin_tv_color_s"
+                android:textSize="@dimen/login_text_size_two"
+                android:visibility="gone"
+                />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/upgrade_cancle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_upgrade"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="22dp"
+        android:padding="10dp"
+        android:src="@drawable/ic_cancel_popup" />
+
+</RelativeLayout>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white_gray_bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:id="@+id/iv_personal_head_portrait"
+            android:layout_width="@dimen/dp50"
+            android:layout_height="@dimen/dp50"
+            android:layout_marginLeft="@dimen/dp20"
+            android:layout_marginTop="@dimen/dp30"
+            android:src="@drawable/icon_doctor_head_portrait"/>
+
+        <TextView
+            android:id="@+id/tv_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/iv_personal_head_portrait"
+            android:layout_marginBottom="@dimen/dp10"
+            android:layout_marginLeft="@dimen/dp10"
+            android:layout_toRightOf="@+id/iv_personal_head_portrait"
+            tools:text="张大板"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp18"
+            />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/rl_person_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp20"
+            android:background="@drawable/ripple_item_click_bg"
+            >
+
+            <TextView
+                style="@style/Personal_TextView"
+                android:drawableLeft="@drawable/icon_personal_info"
+                android:text="个人信息"/>
+
+            <ImageView style="@style/Personal_ImageView"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/rl_my_order"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp01"
+        android:background="@drawable/ripple_item_click_bg">
+
+        <TextView
+            style="@style/Personal_TextView"
+            android:drawableLeft="@drawable/icon_settings"
+            android:text="我的订单" />
+
+        <ImageView style="@style/Personal_ImageView" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_setting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp01"
+        android:background="@drawable/ripple_item_click_bg">
+
+        <TextView
+            style="@style/Personal_TextView"
+            android:drawableLeft="@drawable/icon_settings"
+            android:text="设置" />
+
+        <ImageView style="@style/Personal_ImageView" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_mall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp01"
+        android:background="@drawable/ripple_item_click_bg">
+
+        <TextView
+            style="@style/Personal_TextView"
+            android:drawableLeft="@drawable/icon_settings"
+            android:text="商城" />
+
+        <ImageView style="@style/Personal_ImageView" />
+
+    </RelativeLayout>
+
+</LinearLayout>

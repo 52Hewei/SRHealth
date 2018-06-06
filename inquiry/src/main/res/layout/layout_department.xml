@@ -1,0 +1,256 @@
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    >
+
+    <View
+        android:id="@+id/space_top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/doctor_list_space_width"
+        android:background="@color/white_gray_bg"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <RelativeLayout
+        android:id="@+id/quick_rl_1"
+        android:layout_width="@dimen/dp120"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp20"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/quick_rl_2"
+        app:layout_constraintTop_toBottomOf="@id/space_top"
+
+        >
+
+        <ImageView
+            android:id="@+id/quick_icon_1"
+            style="@style/quick_icon"
+            android:src="@drawable/icon_nk"
+            />
+
+        <TextView
+            android:id="@+id/quick_title_1"
+            style="@style/quick_title"
+            android:layout_below="@id/quick_icon_1"
+            android:text="内科"
+            />
+
+        <ImageView
+            android:id="@+id/quick_status_1"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/icon_checked"
+            android:visibility="invisible"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/quick_rl_2"
+        android:layout_width="@dimen/dp120"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/quick_rl_1"
+        app:layout_constraintRight_toLeftOf="@+id/quick_rl_3"
+        app:layout_constraintLeft_toRightOf="@+id/quick_rl_1"
+        >
+
+        <ImageView
+            android:id="@+id/quick_icon_2"
+            style="@style/quick_icon"
+            android:src="@drawable/icon_fck"
+            />
+
+        <TextView
+            android:id="@+id/quick_title_2"
+            style="@style/quick_title"
+            android:layout_below="@id/quick_icon_2"
+            android:text="妇产科"
+            />
+
+        <ImageView
+            android:id="@+id/quick_status_2"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/icon_checked"
+            android:visibility="invisible"
+            />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/quick_rl_3"
+        android:layout_width="@dimen/dp120"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp30"
+        app:layout_constraintBottom_toBottomOf="@id/quick_rl_1"
+        app:layout_constraintLeft_toRightOf="@+id/quick_rl_2"
+        app:layout_constraintRight_toRightOf="parent"
+        >
+
+        <ImageView
+            android:id="@+id/quick_icon_3"
+            style="@style/quick_icon"
+            android:src="@drawable/icon_wgk"
+            tools:layout_editor_absoluteX="261dp"
+            tools:layout_editor_absoluteY="30dp"/>
+
+        <TextView
+            android:id="@+id/quick_title_3"
+            style="@style/quick_title"
+            android:layout_below="@id/quick_icon_3"
+            android:layout_centerHorizontal="true"
+            android:text="五官科"
+            />
+
+        <ImageView
+            android:id="@+id/quick_status_3"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/icon_checked"
+            android:visibility="invisible"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/quick_rl_5"
+        android:layout_width="@dimen/dp120"
+        android:layout_height="wrap_content"
+       app:layout_constraintBottom_toBottomOf="@id/quick_rl_4"
+        app:layout_constraintRight_toRightOf="@id/quick_rl_2"
+        >
+
+        <ImageView
+            android:id="@+id/quick_icon_5"
+            style="@style/quick_icon"
+            android:src="@drawable/icon_zyk"
+            />
+
+        <TextView
+            android:id="@+id/quick_title_5"
+            style="@style/quick_title"
+            android:layout_below="@id/quick_icon_5"
+            android:text="中医科"
+            />
+
+        <ImageView
+            android:id="@+id/quick_status_5"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/icon_checked"
+            android:visibility="invisible"
+            />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/quick_rl_4"
+        android:layout_width="@dimen/dp120"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp30"
+        app:layout_constraintLeft_toLeftOf="@id/quick_rl_1"
+        app:layout_constraintTop_toBottomOf="@id/quick_rl_1"
+        >
+
+        <ImageView
+            android:id="@+id/quick_icon_4"
+            style="@style/quick_icon"
+            android:src="@drawable/icon_ek"
+            />
+
+        <TextView
+            android:id="@+id/quick_title_4"
+            style="@style/quick_title"
+            android:layout_below="@id/quick_icon_4"
+            android:text="儿科"
+            />
+
+        <ImageView
+            android:id="@+id/quick_status_4"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/icon_checked"
+            android:visibility="invisible"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/quick_rl_6"
+        android:layout_width="@dimen/dp120"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/quick_rl_4"
+        app:layout_constraintRight_toRightOf="@id/quick_rl_3"
+        >
+
+        <ImageView
+            android:id="@+id/quick_icon_6"
+            style="@style/quick_icon"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/icon_qtks"
+            />
+
+        <TextView
+            android:id="@+id/quick_title_6"
+            style="@style/quick_title"
+            android:layout_below="@id/quick_icon_6"
+            android:text="其他科室"
+            />
+
+        <ImageView
+            android:id="@+id/quick_status_6"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/icon_checked"
+            android:visibility="invisible"
+            />
+
+    </RelativeLayout>
+
+
+    <!--<android.support.constraint.Guideline-->
+    <!--android:id="@+id/guideline5"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:orientation="vertical"-->
+    <!--app:layout_constraintGuide_percent="0.0"/>-->
+
+    <!--<android.support.constraint.Guideline-->
+    <!--android:id="@+id/guideline6"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:orientation="vertical"-->
+    <!--app:layout_constraintGuide_percent="0.35"-->
+    <!--/>-->
+
+    <!--<android.support.constraint.Guideline-->
+    <!--android:id="@+id/guideline7"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:orientation="vertical"-->
+    <!--app:layout_constraintGuide_begin="269dp"/>-->
+
+    <View
+        android:id="@+id/space_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/doctor_list_space_width"
+        android:layout_marginTop="@dimen/dp20"
+        android:background="@color/white_gray_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/quick_rl_6"
+        />
+</android.support.constraint.ConstraintLayout>

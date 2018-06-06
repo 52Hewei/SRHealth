@@ -1,0 +1,63 @@
+<resources>
+
+    <!-- Base application theme. -->
+<!--    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        &lt;!&ndash; Customize your theme here. &ndash;&gt;
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>-->
+    <style name="style_text_line_click">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/sp16</item>
+        <item name="android:textColor">@color/color_09cacd</item>
+    </style>
+
+    <style name="prescription_gray_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/gray_666</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="prescription_content">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginRight">15dp</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textColor">@color/black_333333</item>
+        <item name="android:textSize">@dimen/sp16</item>
+    </style>
+
+    <style name="style_text_gray_normal">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/gray_text</item>
+        <item name="android:textSize">@dimen/sp18</item>
+    </style>
+    <style name="quick_icon">
+        <item name="android:layout_width">@dimen/dp60</item>
+        <item name="android:layout_height">@dimen/dp60</item>
+        <item name="android:layout_marginBottom">@dimen/dp10</item>
+        <item name="android:layout_centerHorizontal">true</item>
+    </style>
+
+    <style name="quick_title">
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/sp14</item>
+        <item name="android:textColor">@color/gray_666</item>
+    </style>
+
+    <style name="style_avchat_text_btn">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:drawablePadding">10dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+</resources>

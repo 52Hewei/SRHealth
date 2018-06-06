@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:id="@+id/title_phone"
+                android:layout_height="@dimen/title_height"
+                android:background="@color/colorPrimary"
+    >
+
+    <TextView
+        android:id="@+id/tv_left_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/dp05"
+        android:drawableLeft="@drawable/icon_arrows_return"
+        android:padding="@dimen/dp05"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp16"
+        android:gravity="center_vertical"
+        android:text=""
+        />
+
+    <!--    <TextView
+            android:id="@+id/tv_msg_remind"
+            android:layout_width="@dimen/dip18"
+            android:layout_height="@dimen/dip18"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/tv_left_back"
+            android:background="@drawable/shape_circle_red"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp10"
+            android:visibility="visible"
+            tools:text="8"
+            />-->
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp18"
+        tools:text="我是标题"
+        />
+
+    <TextView
+        android:id="@+id/tv_right_button"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:paddingLeft="@dimen/dp15"
+        android:paddingRight="@dimen/dp15"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp16"
+        android:visibility="gone"
+        tools:text="右边按钮"
+        />
+
+    <ImageView
+        android:id="@+id/iv_action_more_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp40"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:paddingEnd="@dimen/dp15"
+        android:paddingStart="@dimen/dp15"
+        android:scaleType="center"
+        android:src="@drawable/icon_more_menu"
+        android:visibility="gone"
+        tools:visibility="visible"
+        />
+</RelativeLayout>

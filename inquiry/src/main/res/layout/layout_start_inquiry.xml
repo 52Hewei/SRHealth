@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_f6f6f6"
+    android:orientation="vertical"
+    android:id="@+id/rootLayout"
+    >
+
+    <include layout="@layout/layout_title"/>
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/sv_doctor_detail_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/title"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <include
+                android:id="@+id/fl_doctor_info"
+                layout="@layout/layout_doctor_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                >
+
+                <android.support.constraint.Guideline
+                    android:id="@+id/guideline1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_begin="126dp"/>
+
+                <View
+                    android:id="@+id/divide_line1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginTop="@dimen/dp40"
+                    android:background="@color/color_e1e1e1"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_patient_info_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp15"
+                    android:text="患者信息"
+                    android:textColor="@color/gray_999"
+                    android:textSize="@dimen/sp16"
+                    app:layout_constraintBottom_toBottomOf="@id/divide_line1"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+                <View
+                    android:id="@+id/divide_line2"
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginTop="@dimen/dp50"
+                    android:background="@color/color_e1e1e1"
+                    app:layout_constraintTop_toBottomOf="@id/divide_line1"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_start_consult_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="手机号码"
+                    android:textColor="@color/gray_666"
+                    android:textSize="@dimen/sp16"
+                    app:layout_constraintBottom_toTopOf="@id/divide_line2"
+                    app:layout_constraintLeft_toLeftOf="@id/tv_patient_info_title"
+                    app:layout_constraintTop_toBottomOf="@id/divide_line1"
+                    />
+
+                <EditText
+                    android:id="@+id/et_start_consult_phone_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:hint="请输入手机号"
+                    android:inputType="phone"
+                    android:textColor="@color/gray_666"
+                    android:textSize="@dimen/sp16"
+                    app:layout_constraintBaseline_toBaselineOf="@id/tv_start_consult_phone"
+                    app:layout_constraintLeft_toLeftOf="@id/guideline1"
+                    />
+
+                <View
+                    android:id="@+id/divide_line3"
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginTop="@dimen/dp50"
+                    android:background="@color/color_e1e1e1"
+                    app:layout_constraintTop_toBottomOf="@id/divide_line2"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_start_consult_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="患者姓名"
+                    android:textColor="@color/gray_666"
+                    android:textSize="@dimen/sp16"
+                    app:layout_constraintBottom_toTopOf="@id/divide_line3"
+                    app:layout_constraintLeft_toLeftOf="@id/tv_patient_info_title"
+                    app:layout_constraintTop_toBottomOf="@id/divide_line2"
+                    />
+
+                <EditText
+                    android:id="@+id/et_start_consult_name_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:hint="请输入姓名"
+                    android:maxLength="10"
+                    android:textColor="@color/gray_666"
+                    android:textSize="@dimen/sp16"
+                    app:layout_constraintBaseline_toBaselineOf="@id/tv_start_consult_name"
+                    app:layout_constraintLeft_toLeftOf="@id/guideline1"
+                    />
+
+                <View
+                    android:id="@+id/divide_line4"
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginTop="@dimen/dp50"
+                    android:background="@color/color_e1e1e1"
+                    app:layout_constraintTop_toBottomOf="@id/divide_line3"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_start_consult_gender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="性别"
+                    android:textColor="@color/gray_666"
+                    android:textSize="@dimen/sp16"
+                    app:layout_constraintBottom_toTopOf="@id/divide_line4"
+                    app:layout_constraintLeft_toLeftOf="@id/tv_patient_info_title"
+                    app:layout_constraintTop_toBottomOf="@id/divide_line3"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_sex_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="男"
+                    android:textColor="@color/gray_666"
+                    android:textSize="@dimen/sp16"
+                    app:layout_constraintBaseline_toBaselineOf="@id/tv_start_consult_gender"
+                    app:layout_constraintLeft_toLeftOf="@id/guideline1"
+                    />
+
+                <!--          <Button
+                              android:id="@+id/btn_male"
+                              style="?android:attr/borderlessButtonStyle"
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:drawableLeft="@drawable/selector_main_check_box"
+                              android:drawablePadding="@dimen/dp10"
+                              android:minHeight="10dp"
+                              android:minWidth="10dp"
+                              android:text="男"
+                              android:textColor="@color/gray_666"
+                              android:textSize="@dimen/sp16"
+                              app:layout_constraintBaseline_toBaselineOf="@id/tv_start_consult_gender"
+                              app:layout_constraintLeft_toLeftOf="@id/guideline1"
+                              />
+
+                          <Button
+                              android:id="@+id/btn_female"
+                              style="?android:attr/borderlessButtonStyle"
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:drawableLeft="@drawable/selector_main_check_box"
+                              android:drawablePadding="@dimen/dp10"
+                              android:minHeight="10dp"
+                              android:minWidth="10dp"
+                              android:text="女"
+                              android:textColor="@color/gray_666"
+                              android:textSize="@dimen/sp16"
+                              app:layout_constraintBaseline_toBaselineOf="@id/btn_male"
+                              app:layout_constraintLeft_toRightOf="@id/btn_male"
+                              />-->
+
+                <View
+                    android:id="@+id/divide_line5"
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginTop="@dimen/dp50"
+                    android:background="@color/color_e1e1e1"
+                    app:layout_constraintTop_toBottomOf="@id/divide_line4"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_start_consult_age"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="年龄"
+                    android:textColor="@color/gray_666"
+                    android:textSize="@dimen/sp16"
+                    app:layout_constraintBottom_toTopOf="@id/divide_line5"
+                    app:layout_constraintLeft_toLeftOf="@id/tv_patient_info_title"
+                    app:layout_constraintTop_toBottomOf="@id/divide_line4"
+                    />
+
+                <EditText
+                    android:id="@+id/et_start_consult_age_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:hint="请输入年龄"
+                    android:textColor="@color/gray_666"
+                    android:textSize="@dimen/sp16"
+                    app:layout_constraintBaseline_toBaselineOf="@id/tv_start_consult_age"
+                    app:layout_constraintLeft_toLeftOf="@id/guideline1"
+                    />
+
+            </android.support.constraint.ConstraintLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10"
+                android:background="@color/white"
+                >
+
+                <TextView
+                    android:id="@+id/tv_patient_disease_hint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/dp15"
+                    android:text="您也可以点击标签快速填写"
+                    android:textColor="@color/gray_999"
+                    android:textSize="@dimen/sp14"
+                    />
+
+                <com.google.android.flexbox.FlexboxLayout
+                    android:id="@+id/flow_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_patient_disease_hint"
+                    android:layout_marginLeft="@dimen/dp15"
+                    android:layout_marginRight="@dimen/dp15"
+                    android:layout_marginTop="@dimen/dp15"
+                    app:alignContent="flex_start"
+                    app:dividerDrawable="@drawable/shape_divider_transparent"
+                    app:flexWrap="wrap"
+                    app:showDivider="middle"
+                    />
+
+                <com.sirui.inquiry.hospital.widgets.REditText
+                    android:id="@+id/et_start_consult_description_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp80"
+                    android:layout_below="@+id/flow_layout"
+                    android:layout_margin="@dimen/dp20"
+                    android:background="@drawable/selector_gray_round_edit_background"
+                    android:gravity="start"
+                    android:hint="@string/patient_description_hint"
+                    android:inputType="textMultiLine"
+                    android:lineSpacingExtra="@dimen/dp05"
+                    android:maxLength="140"
+                    android:padding="@dimen/dp15"
+                    android:textSize="@dimen/sp14"
+                    />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp25"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/dp30"
+                >
+
+                <LinearLayout
+                    android:id="@+id/ll_agreement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/dp15"
+                    android:gravity="center"
+                    >
+
+                    <ImageView
+                        android:id="@+id/iv_check_box"
+                        android:layout_width="@dimen/dp30"
+                        android:layout_height="@dimen/dp20"
+                        android:paddingRight="@dimen/dp10"
+                        android:src="@drawable/selector_agreement_check_box"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_agreement_hint"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/iv_check_box"
+                        android:text="@string/medicine_agreement_hint"
+                        android:textColor="@color/gray_666"
+                        android:textSize="@dimen/sp14"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_medicine_agreement"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:text="@string/medicine_agreement"
+                        android:textColor="@color/color_09cacd"
+                        android:textSize="@dimen/sp14"
+                        />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btn_start_inquiry"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp45"
+                    android:layout_marginLeft="@dimen/dp30"
+                    android:layout_marginRight="@dimen/dp30"
+                    android:layout_marginTop="@dimen/dp15"
+                    android:background="@drawable/selector_cyan_gray_btn_background"
+                    android:enabled="true"
+                    android:maxHeight="@dimen/dp45"
+                    android:text="@string/start_consult"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/sp16"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

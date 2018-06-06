@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white_gray_bg"
+    >
+
+    <include layout="@layout/layout_title"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_alter_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp60"
+        android:visibility="gone"
+        android:background="@drawable/ripple_item_click_bg"
+        >
+        <TextView
+            android:layout_centerVertical="true"
+            style="@style/Settings_TextView"
+            android:text="@string/reset_password"
+            />
+
+        <ImageView
+            style="@style/Personal_ImageView"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_clear_cache"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp60"
+        android:background="@drawable/ripple_item_click_bg"
+        android:layout_marginTop="@dimen/dp01"
+        >
+
+        <TextView
+            style="@style/Settings_TextView"
+            android:text="@string/delete_cache"
+            />
+
+        <ImageView
+            style="@style/Personal_ImageView"
+            />
+
+    </RelativeLayout>
+
+    <!--<RelativeLayout-->
+        <!--android:id="@+id/rl_user_agreement"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="@dimen/dp60"-->
+        <!--android:background="@drawable/ripple_item_click_bg"-->
+        <!--android:layout_marginTop="@dimen/dp01"-->
+        <!--&gt;-->
+
+        <!--<TextView-->
+            <!--style="@style/Settings_TextView"-->
+            <!--android:text="@string/user_agreement"-->
+            <!--/>-->
+
+        <!--<ImageView-->
+            <!--style="@style/Personal_ImageView"-->
+            <!--/>-->
+
+    <!--</RelativeLayout>-->
+
+<!--    <RelativeLayout
+        android:id="@+id/rl_help_center"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp60"
+        android:background="@drawable/ripple_item_click_bg"
+        android:layout_marginTop="@dimen/dip01"
+        >
+
+        <TextView
+            style="@style/Settings_TextView"
+            android:text="@string/help_center"
+            />
+
+        <ImageView
+            style="@style/Personal_ImageView"
+            />
+
+    </RelativeLayout>-->
+
+    <RelativeLayout
+        android:id="@+id/rl_change_theme"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp60"
+        android:background="@drawable/ripple_item_click_bg"
+        android:layout_marginTop="@dimen/dp01"
+        >
+
+        <TextView
+            style="@style/Settings_TextView"
+            android:text="@string/change_theme"
+            />
+
+        <ImageView
+            style="@style/Personal_ImageView"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_pay"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp60"
+        android:background="@drawable/ripple_item_click_bg"
+        android:layout_marginTop="@dimen/dp01"
+        >
+
+        <TextView
+            style="@style/Settings_TextView"
+            android:text="@string/pay"
+            />
+
+        <ImageView
+            style="@style/Personal_ImageView"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_about"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp60"
+        android:background="@drawable/ripple_item_click_bg"
+        android:layout_marginTop="@dimen/dp01"
+        >
+
+        <TextView
+            style="@style/Settings_TextView"
+            android:text="@string/about"
+            />
+
+        <ImageView
+            style="@style/Personal_ImageView"
+            />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_logout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp45"
+        android:text="@string/exit_login"
+        android:textColor="@color/white"
+        android:layout_marginLeft="@dimen/dp32"
+        android:layout_marginRight="@dimen/dp32"
+        android:textSize="@dimen/sp16"
+        android:layout_marginTop="@dimen/dp60"
+        android:gravity="center"
+        android:background="@drawable/selector_color_primary_normal_btn"
+        />
+
+</LinearLayout>

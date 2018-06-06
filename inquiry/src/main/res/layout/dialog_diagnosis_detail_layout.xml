@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="318dp"
+                android:layout_height="wrap_content"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:background="@color/transparent">
+
+    <LinearLayout
+        android:layout_width="318dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/resultDescText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/diagnosis_detail_note"
+            android:textColor="@color/color_09cacd"
+            android:textSize="@dimen/sp16" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_patient_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:maxLines="1"
+                android:text="@string/patient_name"
+                android:textColor="@color/gray_black_text"
+                android:textSize="@dimen/sp15" />
+
+            <TextView
+                android:id="@+id/tv_patient_gender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:maxLines="1"
+                android:text="@string/patient_gender"
+                android:textColor="@color/gray_black_text"
+                android:textSize="@dimen/sp15" />
+
+            <TextView
+                android:id="@+id/tv_patient_age"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="15dp"
+                android:maxLines="1"
+                android:text="@string/patient_age"
+                android:textColor="@color/gray_black_text"
+                android:textSize="@dimen/sp15" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/firstDiagnosisText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:singleLine="true"
+            android:text="@string/first_diagnosis_colon"
+            android:textColor="@color/gray_black_text"
+            android:textSize="@dimen/sp15" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/firstDiagnosisText"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/adviseColonText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/parse_advise_colon"
+                android:textColor="@color/gray_black_text"
+                android:textSize="@dimen/sp15" />
+
+            <TextView
+                android:id="@+id/adviseText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:ellipsize="end"
+                android:ems="28"
+                android:lineSpacingExtra="@dimen/dp10"
+                android:maxLength="140"
+                android:maxLines="5"
+                android:minLines="2"
+                tools:text="55555555555555555555555"
+                android:textColor="@color/black_333333"
+                android:textSize="@dimen/sp15" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/closeBtn"
+            android:layout_width="@dimen/dp200"
+            android:layout_height="@dimen/dp40"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/dp20"
+            android:layout_marginTop="@dimen/dp40"
+            android:background="@drawable/shape_solid_corners_cyan"
+            android:text="@string/close"
+            android:textColor="@color/white"
+            android:visibility="gone" />
+    </LinearLayout>
+
+<!--
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_width="@dimen/icon_close_size_2"
+        android:layout_height="@dimen/icon_close_size_2"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/icon_close" />
+-->
+
+</RelativeLayout>

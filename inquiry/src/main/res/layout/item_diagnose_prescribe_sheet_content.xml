@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="15dp">
+
+    <TextView
+        android:id="@+id/tv_medicine_index"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/gray_black_text"
+        android:textSize="16sp"
+        tools:text="1、" />
+
+    <TextView
+        android:id="@+id/tv_medicine_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/tv_medicine_index"
+        android:layout_toRightOf="@id/tv_medicine_index"
+        android:gravity="center"
+        android:textColor="@color/gray_black_text"
+        android:textSize="16sp"
+        tools:text="阿莫西林胶囊" />
+
+    <TextView
+        android:id="@+id/tv_medicine_specification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_medicine_name"
+        android:layout_alignStart="@+id/tv_medicine_name"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:textColor="@color/gray_black_text"
+        android:textSize="16sp"
+        tools:text="0.5*24粒" />
+
+    <TextView
+        android:id="@+id/tv_medicine_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_medicine_name"
+        android:layout_toEndOf="@+id/tv_medicine_specification"
+        android:layout_alignTop="@+id/tv_medicine_specification"
+        android:layout_marginStart="30dp"
+        android:gravity="center"
+        android:textColor="@color/gray_black_text"
+        android:textSize="16sp"
+        tools:text="*2盒" />
+
+
+    <TextView
+        android:id="@+id/tv_medicine_usage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/tv_medicine_name"
+        android:layout_below="@id/tv_medicine_specification"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:textColor="@color/gray_black_text"
+        android:textSize="16sp"
+        tools:text="口服，一日3次，一次3粒" />
+
+</RelativeLayout>

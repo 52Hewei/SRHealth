@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/skin_main_bg"
+    tools:context="com.sirui.main.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/fl_main_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        />
+ <!--   <include layout="@layout/layout_bottom_tab"/>-->
+    <com.sirui.main.widget.TabBottomBar
+        android:id="@+id/tab_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp52"
+        android:background="@color/skin_tab_bg"
+        android:paddingTop="@dimen/dp04"
+        />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/ad_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+
+</RelativeLayout>

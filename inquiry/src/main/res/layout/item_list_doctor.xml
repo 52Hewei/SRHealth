@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white_gray_bg"
+    android:paddingLeft="@dimen/doctor_list_space_width"
+    android:paddingRight="@dimen/doctor_list_space_width"
+    >
+
+    <LinearLayout
+        android:id="@+id/ll_dapt_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <TextView
+            android:id="@+id/tv_dept_name"
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:gravity="center"
+            android:text="科室"
+            android:textColor="@color/gray_666"
+            android:textSize="@dimen/sp14"
+            />
+
+        <View
+            android:id="@+id/top_divider_line"
+            style="@style/line_dividing_gray_horizontal_style"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/white_gray_bg"
+            />
+    </LinearLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/ll_dapt_name"
+        >
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_avatar"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="@dimen/dp12"
+            android:layout_marginTop="@dimen/dp15"
+            android:src="@drawable/icon_avatar_doctor"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/doctorNameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp15"
+            android:text="医生名"
+            android:textColor="@color/black_333333"
+            android:textSize="@dimen/sp18"
+            app:layout_constraintLeft_toRightOf="@+id/iv_avatar"
+            app:layout_constraintTop_toTopOf="@+id/iv_avatar"
+            />
+
+        <TextView
+            android:id="@+id/departmentText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp20"
+            android:textColor="@color/gray_black_text"
+            android:textSize="@dimen/sp14"
+            app:layout_constraintBaseline_toBaselineOf="@id/doctorNameText"
+            app:layout_constraintLeft_toRightOf="@id/doctorNameText"
+            tools:text="科室"
+            />
+
+        <TextView
+            android:id="@+id/doctorPositionText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp20"
+            android:textColor="@color/gray_black_text"
+            android:textSize="@dimen/sp14"
+            android:visibility="visible"
+            app:layout_constraintBaseline_toBaselineOf="@id/doctorNameText"
+            app:layout_constraintLeft_toRightOf="@id/departmentText"
+            tools:text="职称"
+            />
+
+        <TextView
+            android:id="@+id/hospitalText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp05"
+            android:textColor="@color/gray_black_text"
+            android:textSize="@dimen/sp14"
+            app:layout_constraintLeft_toLeftOf="@+id/doctorNameText"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/doctorNameText"
+            tools:text="医院名称"
+            />
+             <TextView
+                 android:id="@+id/tv_good_at"
+                 android:layout_width="0dp"
+                 android:layout_height="wrap_content"
+                 android:layout_marginTop="@dimen/dp02"
+                 android:ellipsize="end"
+                 android:singleLine="true"
+                 android:paddingRight="@dimen/dp15"
+                 app:layout_constraintLeft_toLeftOf="@+id/doctorNameText"
+                 app:layout_constraintTop_toBottomOf="@+id/hospitalText"
+                 app:layout_constraintRight_toRightOf="parent"
+                 android:textColor="@color/gray_black_text"
+                 android:textSize="@dimen/sp10"
+                 tools:text="擅长"
+                 />
+
+        <View
+            android:id="@+id/divide_line"
+            android:layout_width="0dp"
+            android:layout_height="1px"
+            android:layout_marginTop="@dimen/dp08"
+            android:background="@color/color_e1e1e1"
+            app:layout_constraintLeft_toLeftOf="@id/doctorNameText"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_good_at"
+            />
+
+        <!--  &lt;!&ndash;20dp为了尽量增大可触摸面积&ndash;&gt;
+          <TextView
+              android:id="@+id/tv_start_consult_text"
+              android:layout_width="wrap_content"
+              android:layout_height="20dp"
+              android:layout_marginTop="2dp"
+              android:text="图文问诊"
+              android:textColor="@color/gray_black_text"
+              android:textSize="@dimen/sp12"
+              android:visibility="gone"
+              app:layout_constraintLeft_toLeftOf="@id/doctorNameText"
+              app:layout_constraintTop_toBottomOf="@id/divide_line"
+              />-->
+
+        <TextView
+            android:id="@+id/tv_free"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="免费"
+            android:textColor="@color/color_fb6400"
+            android:textSize="@dimen/sp16"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="@id/doctorNameText"
+            app:layout_constraintTop_toBottomOf="@id/divide_line"
+            />
+        <TextView
+            android:id="@+id/tv_image_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="图文"
+            android:visibility="visible"
+            android:textColor="@color/gray_666"
+            android:textSize="@dimen/sp14"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="@id/doctorNameText"
+            app:layout_constraintTop_toBottomOf="@id/divide_line"
+            />
+        <TextView
+            android:id="@+id/tv_video"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="视频"
+            android:visibility="visible"
+            android:textColor="@color/gray_666"
+            android:textSize="@dimen/sp14"
+            app:layout_goneMarginLeft="1dp"
+            android:layout_marginLeft="@dimen/dp30"
+            app:layout_constraintLeft_toRightOf="@+id/tv_image_text"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divide_line"
+            />
+
+        <TextView
+            android:id="@+id/tv_doctor_ready_for_consult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="@dimen/dp30"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/quick_to_inquiry"
+            android:textColor="@color/gray_999"
+            android:textSize="@dimen/sp12"
+            android:layout_marginRight="@dimen/dp30"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_free"
+            app:layout_constraintRight_toLeftOf="@+id/tv_doctor_status"
+            app:layout_constraintLeft_toRightOf="@+id/tv_video"
+            app:layout_constraintTop_toTopOf="@+id/tv_free"/>
+
+
+        <TextView
+            android:id="@+id/tv_doctor_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:textColor="@color/color_09cacd"
+            android:textSize="@dimen/sp12"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_free"
+            app:layout_constraintTop_toTopOf="@+id/tv_free"
+            app:layout_constraintEnd_toEndOf="@+id/view"
+            tools:text="在线"/>
+
+        <View
+            android:id="@+id/view"
+            style="@style/line_dividing_gray_horizontal_style"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+    </android.support.constraint.ConstraintLayout>
+</android.support.constraint.ConstraintLayout>

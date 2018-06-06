@@ -1,0 +1,94 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode rootProject.ext.appVersionCode
+        versionName  rootProject.ext.appVersionName
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+
+    buildTypes {
+        debug {
+//            buildConfigField("String", "API_BASE_URL", "\"http://dev2-app.siruijk.com:8081/\"")
+//            buildConfigField("String", "API_BASE_URL", "\"https://uat-yun.siruijk.com:8081/\"")
+            buildConfigField("String", "API_BASE_URL", "\"https://sit-yun.siruijk.com:8081/\"")
+            buildConfigField("boolean", "isDebug", "true")
+            buildConfigField("String", "BUGLY_APP_ID", "\"83650c21d8\"")
+            buildConfigField("String", "APP_ID", "\"srnl5nroabeok0x69t\"")
+            buildConfigField("String", "APP_SECRET", "\"691d66b525065422072aa0fb50e1989a\"")
+        }
+
+        build_sit {
+            debuggable true
+            buildConfigField("String", "API_BASE_URL", "\"https://sit-yun.siruijk.com:8081/\"")
+            buildConfigField("boolean", "isDebug", "true")
+            buildConfigField("String", "BUGLY_APP_ID", "\"83650c21d8\"")
+            buildConfigField("String", "APP_ID", "\"srnl5nroabeok0x69t\"")
+            buildConfigField("String", "APP_SECRET", "\"691d66b525065422072aa0fb50e1989a\"")
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        build_uat {
+            debuggable true
+            buildConfigField("String", "API_BASE_URL", "\"https://uat-yun.siruijk.com:8081/\"")
+            buildConfigField("boolean", "isDebug", "true")
+            buildConfigField("String", "BUGLY_APP_ID", "\"83650c21d8\"")
+            buildConfigField("String", "APP_ID", "\"srnl5nroabeok0x69t\"")
+            buildConfigField("String", "APP_SECRET", "\"691d66b525065422072aa0fb50e1989a\"")
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        build_pvr {
+            buildConfigField("String", "API_BASE_URL", "\"https://pvr-yun.siruijk.com:8081/\"")
+            buildConfigField("boolean", "isDebug", "true")
+            buildConfigField("String", "BUGLY_APP_ID", "\"83650c21d8\"")
+            buildConfigField("String", "APP_ID", "\"srz1kyx2iyqc510iz7\"")
+            buildConfigField("String", "APP_SECRET", "\"70680ad12fa5c8cab12b3bc2bd87440b\"")
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        release {
+            buildConfigField("String", "API_BASE_URL", "\"https://yun1.siruijk.com:8081/\"")
+            buildConfigField("boolean", "isDebug", "true")
+            buildConfigField("String", "BUGLY_APP_ID", "\"83650c21d8\"")
+            buildConfigField("String", "APP_ID", "\"srz1kyx2iyqc510iz7\"")
+            buildConfigField("String", "APP_SECRET", "\"70680ad12fa5c8cab12b3bc2bd87440b\"")
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    api "com.android.support:appcompat-v7:${rootProject.appcompatVersion}"
+
+    api 'com.jakewharton:butterknife:8.5.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
+    api project(':router')
+    api project(':http')
+    //webview
+    compile 'com.just.agentweb:agentweb:4.0.2'
+    //permission
+    compile "com.yanzhenjie:permission:${rootProject.permissionVersion}"
+    compile "com.yanzhenjie.alertdialog:alertdialog:${rootProject.alertdialogVersion}"
+    compile 'com.zhy:changeskin:3.0.0'
+    // 圆角图片
+    api 'de.hdodenhof:circleimageview:2.1.0'
+
+    api 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.5.1'
+    api 'com.github.bumptech.glide:glide:3.7.0'
+    api 'org.greenrobot:eventbus:3.0.0'
+}
+
+apply plugin: 'com.jakewharton.butterknife'

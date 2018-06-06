@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/rootLl"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:keepScreenOn="true"
+                android:orientation="vertical"
+    >
+    <include layout="@layout/layout_title"/>
+    <!--    <RelativeLayout
+            android:id="@+id/layout_title_common"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            >
+
+            <include layout="@layout/layout_title_common"/>
+        </RelativeLayout>-->
+
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/rl_back_bottom"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentBottom="true"-->
+    <!--android:visibility="gone"-->
+    <!--&gt;-->
+
+    <!--<include layout="@layout/item_back_bar_bottom"/>-->
+    <!--</RelativeLayout>-->
+
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/layout_doctor_detail_head"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_marginTop="40dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--&gt;-->
+<!--    <RelativeLayout
+        android:id="@+id/layout_doctor_detail_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/consult_step_indicator_margin_bottom"
+        android:layout_marginTop="@dimen/consult_step_indicator_margin_top"
+        android:gravity="center_horizontal"
+        >
+
+        <include layout="@layout/layout_doctor_detail_head_new"/>
+    </RelativeLayout>-->
+    <!--   </RelativeLayout>-->
+
+<!--    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layout_doctor_detail_head"
+        android:layout_marginBottom="@dimen/dip60"
+        android:layout_marginLeft="@dimen/doctor_detail_margin_left"
+        android:layout_marginRight="@dimen/doctor_detail_margin_right"
+        android:orientation="horizontal"
+        >-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical"
+            >
+            <LinearLayout
+                android:id="@+id/remindContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                />
+
+            <LinearLayout
+                android:id="@+id/message_fragment_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                />
+        </LinearLayout>
+
+    <include layout="@layout/layout_avchat"/>
+
+    </RelativeLayout>
+
+<!--        <RelativeLayout
+            android:id="@+id/avPanelLayout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:visibility="gone"
+            >
+            &lt;!&ndash;<include layout="@layout/layout_chat_info_window"/>&ndash;&gt;
+        </RelativeLayout>-->
+   <!-- </LinearLayout>-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/tv_logout_hint"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="@dimen/dip72"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:background="@color/title_bg_orange"-->
+        <!--android:gravity="center"-->
+        <!--android:text="@string/logout_hint"-->
+        <!--android:textColor="@color/white"-->
+        <!--android:textSize="@dimen/font24"-->
+        <!--android:visibility="visible"-->
+        <!--tools:visibility="visible"-->
+        <!--/>-->
+
+<!--    <ImageView
+        android:id="@+id/iv_return"
+        android:layout_width="@dimen/round_back_btn_height"
+        android:layout_height="@dimen/round_back_btn_width"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/round_back_btn_doctor_detail_margin"
+        android:layout_marginLeft="@dimen/round_back_btn_doctor_detail_margin"
+        android:clickable="true"
+        android:src="@drawable/icon_return_new"
+        />-->
+
+</LinearLayout>

@@ -1,0 +1,81 @@
+if (isModule.toBoolean()) {
+    apply plugin: 'com.android.application'
+} else {
+    apply plugin: 'com.android.library'
+}
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        if (isModule.toBoolean()) {
+            applicationId "com.sirui.guide"
+            versionCode rootProject.ext.appVersionCode
+            versionName  rootProject.ext.appVersionName
+        } else {
+            //ARouter
+            javaCompileOptions {
+                annotationProcessorOptions {
+                    arguments = [moduleName: project.getName()]
+                }
+            }
+        }
+    }
+
+    buildTypes {
+
+        build_sit {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        build_uat {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        build_pvr {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets {
+        main {
+            if (isModule.toBoolean()) {
+                manifest.srcFile 'src/main/module/AndroidManifest.xml'
+            } else {
+                manifest.srcFile 'src/main/AndroidManifest.xml'
+                //集成开发模式下排除debug文件夹中的所有Java文件
+                java {
+                    exclude 'debug*'
+                }
+            }
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+    if (!isModule.toBoolean()) {
+        // 替换成最新版本, 需要注意的是api
+        // 要与compiler匹配使用，均使用最新版可以保证兼容
+        api "com.alibaba:arouter-api:${rootProject.arouterApiVersion}"
+        annotationProcessor "com.alibaba:arouter-compiler:${rootProject.annotationProcessor}"
+    }
+    implementation project(':basiclib')
+    api 'com.jakewharton:butterknife:8.5.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
+}
+apply plugin: 'com.jakewharton.butterknife'

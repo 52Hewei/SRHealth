@@ -1,0 +1,47 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 26
+
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 26
+        versionCode rootProject.ext.appVersionCode
+        versionName  rootProject.ext.appVersionName
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        build_sit {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        build_uat {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        build_pvr {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation "com.android.support:appcompat-v7:${rootProject.appcompatVersion}"
+
+
+    compile 'com.google.code.gson:gson:2.8.0'
+    api 'org.greenrobot:eventbus:3.0.0'
+    compile 'com.lzy.net:okgo:2.1.4'
+    compile 'com.lzy.net:okserver:1.1.3'
+}

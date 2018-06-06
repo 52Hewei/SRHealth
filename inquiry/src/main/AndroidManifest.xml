@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.sirui.inquiry">
+
+    <application>
+        <activity android:name=".InquiryActivity" android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".hospital.ui.activity.DoctorDetailPhoneActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize"/>
+        <activity
+            android:name=".hospital.chat.PatientAVChatActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize"/>
+        <activity
+            android:name=".hospital.ui.activity.InquiryDetailActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".hospital.ui.activity.InquiryRecordActivity" android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".hospital.avchat.AVChatActivity"
+                  android:launchMode="singleTask"
+                  android:screenOrientation="portrait"
+                  android:theme="@style/FullScreenTheme"
+                  android:windowSoftInputMode="stateAlwaysHidden"
+            />
+
+        <service android:name=".hospital.avchat.floatshow.FloatWindowService"/>
+    </application>
+
+</manifest>

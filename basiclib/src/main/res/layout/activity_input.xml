@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_gray_bg"
+    android:orientation="vertical"
+    tools:context="com.sirui.basiclib.ui.InputActivity">
+    <include layout="@layout/layout_title"/>
+    <EditText
+        android:id="@+id/et_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/dp15"
+        android:paddingRight="@dimen/dp15"
+        android:layout_marginTop="@dimen/dp10"
+        android:minHeight="@dimen/dp42"
+        android:textSize="@dimen/sp16"
+        android:paddingTop="@dimen/dp05"
+        android:paddingBottom="@dimen/dp05"
+        android:background="@color/white"
+        />
+</LinearLayout>

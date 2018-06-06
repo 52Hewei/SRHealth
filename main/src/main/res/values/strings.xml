@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">main</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="user_info_name">姓    名：</string>
+    <string name="user_info_name_hint">请输入姓名</string>
+    <string name="user_info_gender">性    别：</string>
+    <string name="user_info_age">年    龄：</string>
+    <string name="user_info_age_hint">请输入年龄</string>
+    <string name="user_info_age_template">%s 岁</string>
+    <string name="user_info_age_unit">岁</string>
+    <string name="user_info_phone">联系电话：</string>
+    <string name="user_info_real_name_error_hint">抱歉，您姓名输入有误，请输入2个字符以上姓名，如：张三</string>
+    <string name="name_hint">* 请输入患者真实姓名、年龄和性别，否则处方无效。</string>
+    <string name="age_input_wrong">年龄输入有误</string>
+
+
+    <string name="settings">设置</string>
+
+    <string name="reset_password">重置密码</string>
+
+    <string name="delete_cache">清除缓存</string>
+
+    <string name="help_center">帮助中心</string>
+
+    <string name="about">关于</string>
+
+    <string name="change_theme">换肤</string>
+    <string name="pay">支付</string>
+
+    <string name="exit_login">退出登录</string>
+</resources>

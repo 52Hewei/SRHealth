@@ -1,0 +1,74 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+    defaultConfig {
+        applicationId "com.sirui.srhealth"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode rootProject.ext.appVersionCode
+        versionName  rootProject.ext.appVersionName
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    signingConfigs {
+        output {
+            storeFile file('../serein.jks')
+            keyAlias 'online_doctor'
+            keyPassword 'serein'
+            storePassword 'serein'
+        }
+    }
+
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.output
+            versionNameSuffix "-debug"
+            manifestPlaceholders = [IM_appKey: "c710e8ddb0139e9c1f17a6dbf6f0c89a"]
+        }
+        build_sit {
+            manifestPlaceholders = [IM_appKey: "c710e8ddb0139e9c1f17a6dbf6f0c89a"]
+            signingConfig signingConfigs.output
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        build_uat {
+            manifestPlaceholders = [IM_appKey: "c710e8ddb0139e9c1f17a6dbf6f0c89a"]
+            signingConfig signingConfigs.output
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        build_pvr {
+            manifestPlaceholders = [IM_appKey: "05678dba4d8ca1144ae1b91fc8e4ff84"]
+            signingConfig signingConfigs.output
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        release {
+            manifestPlaceholders = [IM_appKey: "05678dba4d8ca1144ae1b91fc8e4ff84"]
+            signingConfig signingConfigs.output
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "com.android.support:appcompat-v7:${rootProject.appcompatVersion}"
+    implementation "com.android.support.constraint:constraint-layout:${rootProject.constraintLayoutVersion}"
+    if (!isModule.toBoolean()) {
+        implementation project(':main')
+        implementation project(':login')
+        implementation project(':webview')
+        implementation project(':guide')
+        implementation project(':inquiry')
+        implementation project(':pay')
+    } else {
+        annotationProcessor "com.alibaba:arouter-compiler:${rootProject.annotationProcessor}"
+    }
+    implementation project(':basiclib')
+}

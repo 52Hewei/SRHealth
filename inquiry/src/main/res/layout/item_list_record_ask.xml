@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="20dp"
+    android:paddingBottom="20dp">
+
+        <TextView
+            android:id="@+id/askNameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="张小明"
+            android:textColor="@color/black_333333"
+            android:textSize="16sp"
+            android:layout_marginLeft="20dp"/>
+
+        <TextView
+            android:id="@+id/departmentText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/timeText"
+            android:layout_marginRight="20dp"
+            android:text="内科"
+            android:textColor="@color/gray_text"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/askTypeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/departmentText"
+            android:layout_alignStart="@+id/statusText"
+            android:text="图文"
+            android:textColor="@color/gray_text"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/timeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/askNameText"
+            android:layout_alignLeft="@+id/askNameText"
+            android:layout_marginTop="10dp"
+            android:text="问诊时间：03-05 11:43"
+            android:textColor="@color/gray_text"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/statusText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/askNameText"
+            android:layout_toEndOf="@+id/timeText"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="30dp"
+            android:text="问诊状态：已完成"
+            android:textColor="@color/gray_text"
+            android:textSize="14sp" />
+
+    <!--不写死高度 item 高度无法固定-->
+    <!--<RelativeLayout-->
+        <!--android:layout_width="@dimen/consult_record_form_item_detail_width"-->
+        <!--android:layout_height="@dimen/consult_record_form_item_height"-->
+        <!--android:visibility="gone">-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerInParent="true"-->
+            <!--android:orientation="vertical">-->
+
+            <!--<Button-->
+                <!--android:id="@+id/prescriptionBtn"-->
+                <!--android:layout_width="@dimen/consult_record_form_item_btn_width"-->
+                <!--android:layout_height="@dimen/consult_record_form_item_btn_height"-->
+                <!--android:layout_marginBottom="@dimen/consult_record_form_item_btn_margin_bottom"-->
+                <!--android:background="@drawable/shape_solid_corners_cyan"-->
+                <!--android:text="处方单"-->
+                <!--android:textColor="@color/white"-->
+                <!--android:textSize="@dimen/consult_record_form_item_text_size" />-->
+
+            <!--<Button-->
+                <!--android:id="@+id/lookDetailBtn"-->
+                <!--style="?android:attr/borderlessButtonStyle"-->
+                <!--android:layout_width="@dimen/consult_record_form_item_btn_width"-->
+                <!--android:layout_height="@dimen/consult_record_form_item_btn_height"-->
+                <!--android:background="@drawable/shape_stroke_corners_cyan"-->
+                <!--android:text="问诊记录"-->
+                <!--android:textColor="@color/color_09cacd"-->
+                <!--android:textSize="@dimen/consult_record_form_item_text_size" />-->
+
+            <!--<Button-->
+                <!--android:id="@+id/recoverOrderBtn"-->
+                <!--style="?android:attr/borderlessButtonStyle"-->
+                <!--android:layout_width="@dimen/consult_record_form_item_btn_width"-->
+                <!--android:layout_height="@dimen/consult_record_form_item_btn_height"-->
+                <!--android:background="@drawable/shape_solid_corners_cyan"-->
+                <!--android:text="恢复问诊"-->
+                <!--android:textColor="@color/white"-->
+                <!--android:textSize="@dimen/consult_record_form_item_text_size" />-->
+        <!--</LinearLayout>-->
+    <!--</RelativeLayout>-->
+
+<!--        <TextView
+            android:id="@+id/deleteBtn"
+            android:layout_width="50dp"
+            android:layout_height="22dp"
+            android:layout_alignParentEnd="true"
+            android:gravity="center"
+            android:text="删除"
+            android:textColor="@color/title_bg_orange"
+            android:textSize="16sp"
+            android:visibility="gone"
+            android:layout_marginRight="20dp"/>-->
+
+        <Button
+            android:id="@+id/recoverOrderBtn"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="65dp"
+            android:layout_height="22dp"
+            android:background="@drawable/shape_solid_corners_cyan"
+            android:text="恢复问诊"
+            android:textColor="@color/white"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="20dp"
+            android:textSize="12sp"
+            android:focusable="false"/>
+
+</RelativeLayout>

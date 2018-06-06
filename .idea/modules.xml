@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/SRHealth.iml" filepath="$PROJECT_DIR$/SRHealth.iml" />
+      <module fileurl="file://$PROJECT_DIR$/adlibrary/adlibrary.iml" filepath="$PROJECT_DIR$/adlibrary/adlibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/basiclib/basiclib.iml" filepath="$PROJECT_DIR$/basiclib/basiclib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/guide/guide.iml" filepath="$PROJECT_DIR$/guide/guide.iml" />
+      <module fileurl="file://$PROJECT_DIR$/http/http.iml" filepath="$PROJECT_DIR$/http/http.iml" />
+      <module fileurl="file://$PROJECT_DIR$/inquiry/inquiry.iml" filepath="$PROJECT_DIR$/inquiry/inquiry.iml" />
+      <module fileurl="file://$PROJECT_DIR$/login/login.iml" filepath="$PROJECT_DIR$/login/login.iml" />
+      <module fileurl="file://$PROJECT_DIR$/main/main.iml" filepath="$PROJECT_DIR$/main/main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pay/pay.iml" filepath="$PROJECT_DIR$/pay/pay.iml" />
+      <module fileurl="file://$PROJECT_DIR$/router/router.iml" filepath="$PROJECT_DIR$/router/router.iml" />
+      <module fileurl="file://$PROJECT_DIR$/webview/webview.iml" filepath="$PROJECT_DIR$/webview/webview.iml" />
+    </modules>
+  </component>
+</project>
