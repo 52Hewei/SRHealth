@@ -54,6 +54,6 @@ ext {
     alertdialogVersion = '1.0.1'
 
     nimVersion = '4.7.3'
-    appVersionCode = 1100
+    appVersionCode = 1200
     appVersionName = '1.1.0'
 }
